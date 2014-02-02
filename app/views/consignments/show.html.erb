@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @consignment.owner.name %>
+</p>
+
+<p>
+  <strong>Good:</strong>
+  <%= @consignment.good.name %>
+  <%= @consignment.good.price %>
+</p>
+
+<%= link_to 'Edit', edit_consignment_path(@consignment) %> |
+<%= link_to 'Back', consignments_path %>

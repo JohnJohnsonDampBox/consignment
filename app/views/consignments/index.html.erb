@@ -1,0 +1,31 @@
+<h1>Listing consignments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Owner</th>
+      <th>Good</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consignments.each do |consignment| %>
+      <tr>
+        <td><%= consignment.owner.name %></td>
+        <td><%= consignment.good.name %></td>
+        <td><%= link_to 'Show', consignment %></td>
+        <td><%= link_to 'Edit', edit_consignment_path(consignment) %></td>
+        <td><%= link_to 'Destroy', consignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Consignment', new_consignment_path %>
+<%= link_to 'New Good', new_good_path %>
+<%= link_to 'New Owner', new_owner_path %>
