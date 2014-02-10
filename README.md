@@ -9,3 +9,7 @@ run the following:
 
 $rake db:migrate
 $rake db:seed
+
+License
+=======
+[MIT](http://clu.mit-license.org/)
